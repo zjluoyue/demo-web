@@ -10,6 +10,10 @@
 
     <context:component-scan base-package="org.zjluoyue"/>
     <!--<mvc:annotation-driven />-->
+
+    <!--控制器类名-处理器映射-->
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="suffix" value=".jsp"/>

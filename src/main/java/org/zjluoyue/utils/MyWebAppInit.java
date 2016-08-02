@@ -20,6 +20,6 @@ public class MyWebAppInit implements WebApplicationInitializer{
         ServletRegistration.Dynamic registration = servletContext
                 .addServlet("dispatcher", new DispatcherServlet(appContext));
         registration.setLoadOnStartup(1);
-        registration.addMapping("/demo-web");
+        registration.addMapping("/demo-web/*");
     }
 }
