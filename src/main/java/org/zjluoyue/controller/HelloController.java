@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-//@RequestMapping(value = "/hello")
+@RequestMapping(value = "")
 public class HelloController {
 
     @RequestMapping(value = "/say", method = RequestMethod.GET)
@@ -20,8 +20,9 @@ public class HelloController {
         return "welcome";
     }
 
-    @RequestMapping
-    public String hello() {
-        return "welcome";
+    @RequestMapping()
+    public String hello(ModelMap model) {
+        model.addAttribute("greeting", "Hello Spring MVC Framework!");
+        return "hello";
     }
 }

@@ -16,11 +16,6 @@ public class MyWebAppInit implements WebApplicationInitializer{
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
 
-        /**
-         *  采用xml配置servlet容器
-         */
-
-
         AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
         appContext.register(MyWebConfig.class);
         appContext.setServletContext(servletContext);
@@ -29,6 +24,6 @@ public class MyWebAppInit implements WebApplicationInitializer{
         ServletRegistration.Dynamic registration = servletContext
                 .addServlet("dispatcher", new DispatcherServlet(appContext));
         registration.setLoadOnStartup(1);
-        registration.addMapping("/demo-web/*");
+        registration.addMapping("/");
     }
 }
