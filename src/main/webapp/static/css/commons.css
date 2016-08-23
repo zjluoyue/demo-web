@@ -1,0 +1,96 @@
+/* 模板 */
+@charset "UTF-8";
+
+body {
+    padding-top: 5rem;
+    margin-bottom: 60px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+.navbar {
+    margin: 0;
+}
+.nav-item {
+    margin-top: 5px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f8f8f8;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+.form-signin {
+    max-width: 330px;
+    padding: 0;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+.card {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: .25rem;
+    max-width: 330px;
+    margin: 0 auto;
+}
+.form-group {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.text-xs-center {
+    text-align: center!important;
+}
+.text-muted {
+    color: #818a91;
+}

@@ -1,29 +1,27 @@
 package org.zjluoyue.utils;
 
-import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.context.support.XmlWebApplicationContext;
-import org.springframework.web.servlet.DispatcherServlet;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+
 
 /**
  * Created by zjluoyue on 2016/8/2.
  */
-public class MyWebAppInit implements WebApplicationInitializer{
+public class MyWebAppInit extends AbstractAnnotationConfigDispatcherServletInitializer{
+
     @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[] { MyWebConfig.class };
+    }
 
-        AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-        appContext.register(MyWebConfig.class);
-        appContext.setServletContext(servletContext);
-        appContext.refresh();
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return null;
+    }
 
-        ServletRegistration.Dynamic registration = servletContext
-                .addServlet("dispatcher", new DispatcherServlet(appContext));
-        registration.setLoadOnStartup(1);
-        registration.addMapping("/");
+    @Override
+    protected String[] getServletMappings() {
+        return new String[] { "/" };
     }
 }

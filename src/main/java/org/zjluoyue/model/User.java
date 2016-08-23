@@ -41,4 +41,9 @@ public class User {
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
+
+    @Override
+    public String toString() {
+        return "username: " + this.getUserName();
+    }
 }
