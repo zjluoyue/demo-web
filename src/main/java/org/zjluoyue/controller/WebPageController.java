@@ -20,12 +20,12 @@ public class WebPageController {
     UserService userService;
 
 
-    @GetMapping(value = "/login")
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
         return "login";
     }
 
-    @PostMapping(value = "/login")
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String isUser(User user, ModelMap model) {
         System.out.println(user);
         System.out.println("Login Successful");
@@ -35,15 +35,21 @@ public class WebPageController {
         return "home";
     }
 
-    @GetMapping(value = "/register")
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String register() {
         return "register";
     }
 
-    @PostMapping(value = "/register")
-    public String addUser(@RequestBody User user) {
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public String addUser(User user) {
+        System.out.println(user);
+        System.out.println("Register Successful");
         return "redirect:/login";
     }
 
+    @RequestMapping(value = "/toLogin", method = RequestMethod.GET)
+    public String toLogin() {
+        return "toLgin";
+    }
 
 }

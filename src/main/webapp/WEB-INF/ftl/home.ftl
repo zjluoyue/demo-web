@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="zh_CN">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-<h1>welcome</h1>
-<h1>${greet}</h1>
-<h1>中文标题</h1>
-<h1>${(5 + 6) / 2}</h1>
-</body>
-</html>
+<#include "base.ftl">
+<#macro title>
+    欢迎：${user.userName}
+</#macro>
+
+<#macro content>
+<div class="text-xs-center">
+    <h2>一个标题</h2>
+    <p>by: ${user.userName}</p>
+</div>
+</#macro>

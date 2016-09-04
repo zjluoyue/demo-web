@@ -42,19 +42,20 @@
 </nav>
 <div class="container">
     <div class="col-md-4 col-md-offset-4">
-        <form class="form-signin">
+        <form class="form-signin" action="register" method="post">
         	<div class="text-xs-center">
                 <h2 class="form-signin-heading">Sign up </h2>
                 <hr>
         	</div>
             <fieldset class="form-group">
                 <label for="username" class="sr-only">UserName</label>
-                <input type="text" id="username" class="form-control" placeholder="your username"
+                <input type="text" id="username" name="userName" class="form-control"
+                       placeholder="your username"
                        required autofocus>
             </fieldset>
             <fieldset class="form-group">
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="inputPassword" class="form-control"
+                <input type="password" name="passWord" id="inputPassword" class="form-control"
                        placeholder="create password" required>
             </fieldset>
 

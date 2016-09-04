@@ -1,4 +1,4 @@
-package org.zjluoyue.utils;
+package org.zjluoyue.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
@@ -19,8 +19,7 @@ import java.util.Properties;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.zjluoyue"})
-@Import({HibernateConfiguration.class})
+@ComponentScan(basePackages = {"org.zjluoyue.controller, org.zjluoyue.service"})
 @PropertySource(value = {"classpath:freemarker.properties"})
 public class MyWebConfig extends WebMvcConfigurerAdapter {
 
@@ -93,5 +92,7 @@ public class MyWebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**").addResourceLocations("/static/");
+        registry.addResourceHandler("/html/**").addResourceLocations("/html/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");
     }
 }

@@ -8,9 +8,7 @@ import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
-/**
- * Created by zjluoyue on 2016/8/17.
- */
+@SuppressWarnings("unchecked")
 @Transactional
 public class DaoBaseImpl<T> implements DaoBase<T> {
 

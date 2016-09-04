@@ -4,6 +4,8 @@ import junit.framework.*;
 import org.junit.*;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 /**

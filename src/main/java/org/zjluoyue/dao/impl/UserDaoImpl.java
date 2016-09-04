@@ -8,13 +8,14 @@ import org.zjluoyue.model.User;
 /**
  * Created by zjluoyue on 2016/8/17.
  */
+@SuppressWarnings("unchecked")
 @Repository("UserDao")
 public class UserDaoImpl extends DaoBaseImpl<User> implements UserDao {
 
     @Override
     public User getByUsername(String userName) {
         return (User) getSession()
-                .createQuery("FROM User u WHERE u.userName = ?")
+                .createQuery("from User where username=?")
                 .setParameter(0, userName)
                 .uniqueResult();
     }

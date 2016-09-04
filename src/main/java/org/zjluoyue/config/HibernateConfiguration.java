@@ -1,4 +1,4 @@
-package org.zjluoyue.utils;
+package org.zjluoyue.config;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -25,4 +25,9 @@ public class HelloController {
         model.addAttribute("greeting", "Hello Spring MVC Framework!");
         return "hello";
     }
+
+    @RequestMapping("/simple")
+    public String simple() {
+        return "simple";
+    }
 }
