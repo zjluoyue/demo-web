@@ -9,7 +9,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <hibernate.version>5.2.1.Final</hibernate.version>
+        <hibernate.version>5.3.20.Final</hibernate.version>
         <mysql.connector.version>5.1.38</mysql.connector.version>
     </properties>
 
